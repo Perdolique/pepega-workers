@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "pepega-workers",
+  "version": "0.0.1",
+  "description": "Workers for Pepega",
+  "keywords": [
+    "pepega"
+  ],
+  "workspaces": [
+    "workers/*"
+  ],
+  "homepage": "https://github.com/Perdolique/pepega-workers#readme",
+  "bugs": {
+    "url": "https://github.com/Perdolique/pepega-workers/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Perdolique/pepega-workers.git"
+  },
+  "license": "ISC",
+  "author": "Pier Dolique (Perdoloque)",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  }
+}
