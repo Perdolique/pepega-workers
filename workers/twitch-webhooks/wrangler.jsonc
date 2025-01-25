@@ -4,9 +4,13 @@
  */
 {
   "$schema": "../../node_modules/wrangler/config-schema.json",
-  "name": "online-notification",
-  "main": "src/index.ts",
+  "name": "twitch-webhooks",
+  "main": "src/app.ts",
   "compatibility_date": "2025-01-09",
+
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
 
   "observability": {
     "enabled": true
@@ -18,7 +22,12 @@
    */
   "placement": {
     "mode": "smart"
-  }
+  },
+
+  "routes": [{
+    "pattern": "pooque.pepega.app",
+    "custom_domain": true
+  }]
 
   /**
    * Bindings
