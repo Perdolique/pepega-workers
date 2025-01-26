@@ -16,7 +16,7 @@
     "twitch": "0.0.1",
     "typescript": "5.7.3",
     "valibot": "1.0.0-beta.14",
-    "vitest": "2.1.8",
+    "vitest": "3.0.4",
     "wrangler": "3.105.1"
   },
   "dependencies": {
