@@ -12,8 +12,6 @@ jobs:
   deploy:
     runs-on: ubuntu-24.04
     environment: Staging
-    env:
-      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -25,5 +23,7 @@ jobs:
       - name: Install dependencies
         run: npm --workspace twitch-webhooks ci
       - name: Deploy to Cloudflare Workers
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: npm --workspace twitch-webhooks run deploy:staging
 
