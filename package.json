@@ -24,8 +24,5 @@
   "main": "index.js",
   "scripts": {
     "test": "exit 0"
-  },
-  "devDependencies": {
-    "h3": "1.13.1"
   }
 }
