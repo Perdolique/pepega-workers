@@ -26,6 +26,6 @@
     "test": "exit 0"
   },
   "devDependencies": {
-    "h3": "1.13.1"
+    "h3": "1.14.0"
   }
 }
