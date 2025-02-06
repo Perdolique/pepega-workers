@@ -22,6 +22,13 @@
       "when": 1738790933842,
       "tag": "0002_seed_oauth_provider_twitch",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1738875292029,
+      "tag": "0003_curly_beast",
+      "breakpoints": true
     }
   ]
 }
