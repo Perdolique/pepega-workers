@@ -20,8 +20,8 @@ jobs:
           node-version: '22.13.1'
           cache: 'npm'
       - name: Install dependencies
-        run: npm ci
+        run: npm --workspace database ci
       - name: Run database migration
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: npm run db:migrate
+        run: npm --workspace database run db:migrate

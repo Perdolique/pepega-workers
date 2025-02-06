@@ -1,6 +1,6 @@
 import { limits } from './constants'
 import { relations, sql } from 'drizzle-orm'
-import { integer, pgTable, timestamp, unique, uuid, varchar } from 'drizzle-orm/pg-core'
+import { index, integer, pgTable, timestamp, unique, uuid, varchar } from 'drizzle-orm/pg-core'
 
 /**
  * Users table
@@ -167,6 +167,7 @@ export const webhooks = pgTable('webhooks', {
   secret: varchar(),
 
   // The subscription ID from Twitch registration
+  // TODO: createdAt should be used to get only the latest subscription
   subscriptionId: varchar(),
 
   createdAt:
@@ -177,7 +178,8 @@ export const webhooks = pgTable('webhooks', {
     .notNull()
     .defaultNow()
 }, (table) => [
-  unique().on(table.streamerId, table.type)
+  unique().on(table.streamerId, table.type),
+  index().on(table.subscriptionId)
 ])
 
 /**
