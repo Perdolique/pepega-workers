@@ -16,7 +16,7 @@
     "@neondatabase/serverless": "0.10.4",
     "@types/ws": "8.5.14",
     "drizzle-kit": "0.30.4",
-    "drizzle-orm": "0.39.1",
+    "drizzle-orm": "0.39.2",
     "tsx": "4.19.2",
     "ws": "8.18.0"
   }
