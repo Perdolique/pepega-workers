@@ -7,9 +7,9 @@
     "pepega"
   ],
   "workspaces": [
-    "common/database",
+    "common/pepega-database",
     "common/pepega-utils",
-    "common/twitch",
+    "common/pepega-twitch",
     "workers/*"
   ],
   "homepage": "https://github.com/Perdolique/pepega-workers#readme",

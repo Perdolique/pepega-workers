@@ -1,5 +1,5 @@
 {
-  "name": "twitch",
+  "name": "@pepega/twitch",
   "version": "0.0.1",
   "description": "Twitch API",
   "license": "ISC",
@@ -8,8 +8,5 @@
   "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "ofetch": "^1.4.1"
   }
 }
