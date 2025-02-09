@@ -16,57 +16,31 @@
     "enabled": true
   },
 
-  "env": {
-    "production": {
-      "routes": [{
-        "pattern": "pooque.pepega.app",
-        "custom_domain": true
-      }]
-    },
+  "routes": [{
+    "pattern": "pooque.pepega.app",
+    "custom_domain": true
+  }],
 
+  "kv_namespaces": [{
+    "binding": "KV",
+    "id": "f891dd5cc6414ad2a480b05014b371cc"
+  }],
+
+  "placement": {
+    "mode": "smart"
+  },
+
+  "env": {
     "staging": {
       "routes": [{
         "pattern": "pooque-staging.pepega.app",
         "custom_domain": true
+      }],
+
+      "kv_namespaces": [{
+        "binding": "KV",
+        "id": "b331c1aeb9134b578548914dbf9adacc"
       }]
     }
-  },
-
-  /**
-   * Smart Placement
-   * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
-   */
-  "placement": {
-    "mode": "smart"
   }
-
-  /**
-   * Bindings
-   * Bindings allow your Worker to interact with resources on the Cloudflare Developer Platform, including
-   * databases, object storage, AI inference, real-time communication and more.
-   * https://developers.cloudflare.com/workers/runtime-apis/bindings/
-   */
-
-  /**
-   * Environment Variables
-   * https://developers.cloudflare.com/workers/wrangler/configuration/#environment-variables
-   */
-  // "vars": { "MY_VARIABLE": "production_value" },
-
-  /**
-   * Note: Use secrets to store sensitive data.
-   * https://developers.cloudflare.com/workers/configuration/secrets/
-   */
-
-  /**
-   * Static Assets
-   * https://developers.cloudflare.com/workers/static-assets/binding/
-   */
-  // "assets": { "directory": "./public/", "binding": "ASSETS" },
-
-  /**
-   * Service Bindings (communicate between multiple Workers)
-   * https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
-   */
-  // "services": [{ "binding": "MY_SERVICE", "service": "my-service" }]
 }

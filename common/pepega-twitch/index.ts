@@ -1,16 +1,14 @@
-import { ofetch } from 'ofetch'
-
 interface VerifyEventMessageParams {
   messageId: string;
   messageTimestamp: string;
-  body: string;
+  bodyString: string;
   messageSignature: string;
   secret: string;
 }
 
 export async function verifyEventMessage(params: VerifyEventMessageParams) {
   const encoder = new TextEncoder()
-  const testString = `${params.messageId}${params.messageTimestamp}${params.body}`
+  const testString = `${params.messageId}${params.messageTimestamp}${params.bodyString}`
   const keyData = encoder.encode(params.secret)
   const messageData = encoder.encode(testString)
 

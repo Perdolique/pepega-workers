@@ -5,7 +5,7 @@ on:
     branches:
       - master
     paths:
-      - 'common/database/migrations/**'
+      - 'common/pepega-database/migrations/**'
 
 jobs:
   migration:
@@ -20,12 +20,12 @@ jobs:
           node-version: '22.13.1'
           cache: 'npm'
       - name: Install dependencies
-        run: npm --workspace database ci
+        run: npm --workspace @pepega/database ci
       - name: Run database migration
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: npm --workspace database run db:migrate
+        run: npm --workspace @pepega/database run db:migrate
       - name: Seed database
         env:
           DATABASE_URL: ${{ secrets.DATABASE_URL }}
-        run: npm --workspace database run db:seed
+        run: npm --workspace @pepega/database run db:seed

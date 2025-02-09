@@ -1,10 +1,13 @@
 {
-  "name": "database",
+  "name": "@pepega/database",
   "version": "0.0.1",
   "description": "Database",
   "license": "ISC",
   "author": "",
   "type": "module",
+  "exports": {
+    "./connection": "./connection.ts"
+  },
   "scripts": {
     "db:start": "docker compose up -d",
     "db:generate": "drizzle-kit generate",
